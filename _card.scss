@@ -1,31 +1,52 @@
-body {
-    font-family: 'Outfit', sans-serif;
-    font-size: 18px;
+.card{
+    max-width: 345px;
+    height: 600px;
     line-height: 1.5;
-    background-color: hsl(217, 54%, 11%)
-}
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: $Very-dark-blue-card-BG;
+    color: $Soft-blue;
 
-.card {
-    margin: 200px auto;
-    max-width: 300px;
-    padding: 16px 16px 24px 16px;
-    border-radius: 10px;
-    background-color: hsl(216, 50%, 16%);
-    color: rgba(155, 177, 224, 0.753);
-
-    h2 {
-        margin: 16px 0;
-        font-size: 24px;
-        color: #fff;
-        font-weight: 600;
-        &:hover{
-            color: $color;
-        }
+    .card-image {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background-image: url(./images/image-equilibrium.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        border-radius: 12px;
+        cursor: pointer;
     }
 
-    img {
-        max-width: 100%;
-        border-radius: 10px;
+    .icon {
+        width: 100%;
+        height: 100%;
+        background-color: hsla(178, 100%, 50%, .6);
+        border-radius: 12px;
+        opacity: 0;
+        transition: all 300ms;
+    }
+
+    .icon .icon-view {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .icon:hover{
+        opacity: 1;
+    }
+
+    h1 {
+        margin: 16px 0;
+        font-size: 24px;
+        color: $White;
+        font-weight: 600;
+        &:hover {
+            color: $Cyan;
+        }
     }
 
     .par {
@@ -47,14 +68,14 @@ body {
             }
 
             .money {
-                color: $color;
+                color: $Cyan;
             }
         }
     }
 
     hr {
         margin-top: 16px;
-        background-color: rgba(115, 126, 148, 0.753);
+        background-color: $Very-dark-blue-line;
         border: none;
         height: 0.1px;
     }
@@ -69,10 +90,11 @@ body {
             margin-right: 16px;
         }
 
-        a{
-            color:rgba(155, 177, 224, 0.753);
-            &:hover{
-                color: $color;
+        a {
+            color: $White;
+
+            &:hover {
+                color: $Cyan;
             }
         }
     }
